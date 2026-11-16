@@ -1,0 +1,28 @@
+# Spark Defaults — Template
+# Copy to spark-defaults.conf and adjust paths for your machine.
+#
+# Usage: either place in $SPARK_HOME/conf/ or pass via
+#   spark-submit --properties-file conf/spark-defaults.conf
+
+# --- Cluster ---
+spark.master                       spark://localhost:7077
+spark.driver.memory                2g
+
+# --- Event logging (required for deliverables) ---
+spark.eventLog.enabled             true
+spark.eventLog.dir                 file:///home/USER/spark-events
+spark.history.fs.logDirectory      file:///home/USER/spark-events
+
+# --- Default executor resources (overridden per experiment) ---
+# spark.executor.cores             1
+# spark.executor.memory            2g
+# spark.cores.max                  4
+
+# --- AQE (on by default in Spark 4.x) ---
+spark.sql.adaptive.enabled         true
+
+# --- Shuffle ---
+spark.sql.shuffle.partitions       200
+
+# --- Parquet ---
+spark.sql.parquet.compression.codec snappy

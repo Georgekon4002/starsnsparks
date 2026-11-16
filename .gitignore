@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Environment and secrets
+.env
+*.pem
+*.key
+
+# Raw and processed data (large files — NOT committed)
+raw/
+parquet/
+*.tar
+*.gz
+!event_logs/*.gz
+*.zip
+
+# Yelp JSON files (data — not committed even if placed in repo root)
+yelp_academic_dataset_*.json
+
+# GloVe
+glove.*.txt
+
+# Local Spark installation and runtime
+spark/
+logs/
+work/
+metastore_db/
+derby.log
+*.lz4
+*.snappy
+*.zstd
+
+# Spark event logs (raw — committed only when compressed)
+spark-events/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Assignment PDF (not part of submission)
+Ekfonisi_Ergasias_2026-27_GR.pdf
+
+# Local machine configuration (generated from template)
+conf/spark-defaults.conf
+conf/cluster.env
